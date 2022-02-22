@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script defer src="js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="cep" id="cep">
+
+        <h1 class="headingCEP"> <span>CONSULTAR</span> CPF </h1> 
+       
+    <form >
+            <input  placeholder="Informe o CEP" class="box" id="numeroCep" maxlength="14">
+            <input type="text" placeholder="Nome" class="box" id="logradouro" disabled>
+            <input  placeholder="MAE" class="box" id="complemento" disabled>
+            <input  placeholder="PAI" class="box" id="bairro" disabled>
+            <input  placeholder="ANIVERSARIO" class="box" id="cidade" disabled>
+            <input type="button" onclick="puxaCEP()" id="ceps" value=" Consultar">
+        
+            
+        </form>
+       
+    </section>
+    
+    
+</body>
+</html>
