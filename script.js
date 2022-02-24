@@ -70,7 +70,7 @@ const puxaCEP = async () => {
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
-    console.log(data)
+    
     preencheFormulario(data)
 
 }
@@ -95,13 +95,6 @@ document.getElementById('num3').value = data.Dados.phones[2].phone
 document.getElementById('num4').value = data.Dados.phones[3].phone
 document.getElementById('num5').value = data.Dados.phones[4].phone
 
-//EMAILS         
-document.getElementById('email1').value = data.Dados.emails[0].email
-document.getElementById('email2').value = data.Dados.emails[1].email
-document.getElementById('email3').value = data.Dados.emails[2].email
-document.getElementById('email4').value = data.Dados.emails[3].email
-document.getElementById('email5').value = data.Dados.emails[4].email
-
 }
 
 const puxaEnd = async () => {
@@ -112,7 +105,7 @@ const puxaEnd = async () => {
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
-    console.log(data)
+    
     puxaTel(data)
 
 }
@@ -145,7 +138,7 @@ const puxaEmail = (data)=>{
         const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
         const dados = await fetch(url);
         const data = await dados.json();
-        console.log(data)
+        
         puxaEmail(data)
     
     }
