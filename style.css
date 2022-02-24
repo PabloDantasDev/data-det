@@ -409,6 +409,7 @@ section{
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
     }
+   
 
     .header{
         left:-110%;
@@ -430,10 +431,48 @@ section{
     html{
         font-size: 40%;
     }
+    
 
     .header{
         width:100%;
         border-right: 0;
     }
 
+}
+
+#load{
+    padding: 10px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5PX;
+    margin-top: 5px;
+    background-color: rgb(88, 240, 182);
+    display: none;
+}
+#loadTel{
+    padding: 10px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5PX;
+    margin-top: 5px;
+    background-color: rgb(88, 240, 182);
+    display: none;
+}
+#loadEmail{
+    padding: 10px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5PX;
+    margin-top: 5px;
+    background-color: rgb(88, 240, 182);
+    display: none;
 }

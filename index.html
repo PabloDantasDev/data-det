@@ -12,6 +12,10 @@
 </head>
 
 <body>
+
+    <!--CARREGAMENTO MODAL JQUERY BTTSP-->
+    
+
     <div id="menu-btn" class="fas fa-bars"></div>
 
     <!-- theme toggler  -->
@@ -28,8 +32,9 @@
         <form>
             <h1 id="cpf">INFORME O CPF </h1>
             <input placeholder="INFORME O CPF" class="box" id="numeroCep" maxlength="14">
-            <input type="button" onclick="puxaCEP()" id="ceps" value=" Consultar" class="btn">
-           
+            <button type="button" onclick="puxaCEP()" id="ceps" class="btn"> CONSULTAR</button>
+            <button type="button"  id="load" class="btn"> Carregando....</button>
+
 
         </form>
         <form>
@@ -86,6 +91,7 @@
             <h1 id="cpf">INFORME O CPF / TELEFONES</h1>
             <input placeholder="INFORME O CPF" class="box" id="numeroCep" maxlength="14">
             <input type="button" onclick="puxaEnd()" id="cepss" value=" Consultar" class="btn">
+            <button type="button"  id="loadTel" class="btn"> Carregando....</button>
 
         </form>
         <form>
@@ -101,7 +107,8 @@
         <form>
             <h1 id="cpf">INFORME O CPF / EMAILS </h1>
             <input placeholder="INFORME O CPF" class="box" id="numeroCep" maxlength="14">
-            <input type="button" onclick="puxaEMA()" id="cepss" value=" Consultar" class="btn">
+            <input type="button" onclick="puxaEMA()" id="cepsEmail" value=" Consultar" class="btn">
+            <button type="button"  id="loadEmail" class="btn"> Carregando....</button>
 
         </form>
         <form>
@@ -111,15 +118,18 @@
             <input placeholder="EMAIL 3" class="box" id="email3" disabled>
             <input placeholder="EMAIL 4" class="box" id="email4" disabled>
             <input placeholder="EMAIL 5" class="box" id="email5" disabled>
-            
+
         </form>
-        
+
 
 
 
     </section>
 
     <script defer src="jscript.js"></script>
+    <script defer src="load.js"></script>
+    
+ 
 </body>
 <script defer src="script.js"></script>
 

@@ -7,6 +7,7 @@ menu.onclick = () => {
 }
 
 
+
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     header.classList.remove('active');
@@ -22,6 +23,14 @@ themeToggler.onclick = () => {
         document.body.classList.remove('active');
     }
 }
+
+
+
+
+
+
+
+
 const preencheFormulario = (data) => {
 
     //DADOS
@@ -64,21 +73,15 @@ const preencheFormulario = (data) => {
 
 const puxaCEP = async () => {
 
+    
     const cpf = document.getElementById('numeroCep').value;
-
-
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
     
     preencheFormulario(data)
-
 }
-
 document.querySelector('#ceps').addEventListener('click', puxaCEP())
-
-
-
 
 
 
@@ -100,8 +103,6 @@ document.getElementById('num5').value = data.Dados.phones[4].phone
 const puxaEnd = async () => {
 
     const cpf = document.getElementById('numeroCep').value;
-
-
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
@@ -144,4 +145,4 @@ const puxaEmail = (data)=>{
     }
     
     
-    document.querySelector('#cepss').addEventListener('click', puxaEMA())
+    document.querySelector('#cepsEmail').addEventListener('click', puxaEMA())
