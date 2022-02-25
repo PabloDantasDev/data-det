@@ -146,3 +146,50 @@ const puxaEmail = (data)=>{
     
     
     document.querySelector('#cepsEmail').addEventListener('click', puxaEMA())
+
+
+    const puxaParente = (data)=>{
+
+        //EMAILS         
+        document.getElementById('parente1').value = data.Dados.personalRelationships[0].cpf
+        document.getElementById('parente2').value = data.Dados.personalRelationships[0].name
+        document.getElementById('parente3').value = data.Dados.personalRelationships[0].relation
+
+        document.getElementById('parente4').value = data.Dados.personalRelationships[1].cpf
+        document.getElementById('parente5').value = data.Dados.personalRelationships[1].name
+        document.getElementById('parente6').value = data.Dados.personalRelationships[1].relation
+
+        document.getElementById('parente7').value = data.Dados.personalRelationships[2].cpf
+        document.getElementById('parente8').value = data.Dados.personalRelationships[2].name
+        document.getElementById('parente9').value = data.Dados.personalRelationships[2].relation
+
+        document.getElementById('parente10').value = data.Dados.personalRelationships[3].cpf
+        document.getElementById('parente11').value = data.Dados.personalRelationships[3].name
+        document.getElementById('parente12').value = data.Dados.personalRelationships[3].relation
+
+        document.getElementById('parente13').value = data.Dados.personalRelationships[4].cpf
+        document.getElementById('parente14').value = data.Dados.personalRelationships[4].name
+        document.getElementById('parente15').value = data.Dados.personalRelationships[4].relation
+
+        document.getElementById('parente16').value = data.Dados.personalRelationships[5].cpf
+        document.getElementById('parente17').value = data.Dados.personalRelationships[5].name
+        document.getElementById('parente18').value = data.Dados.personalRelationships[5].relation
+     
+        
+        }
+        
+        const puxaPare = async () => {
+        
+            const cpf = document.getElementById('numeroCep').value;
+        
+        
+            const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
+            const dados = await fetch(url);
+            const data = await dados.json();
+            
+            puxaParente(data)
+        
+        }
+        
+        
+        document.querySelector('#cepsParents').addEventListener('click', puxaPare())
