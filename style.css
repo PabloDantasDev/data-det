@@ -23,6 +23,31 @@
     transition: .2s linear;
    
 }
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+   cursor: pointer;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#277fae ;
+    width: 2px;
+    cursor: pointer;
+    
+   
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1676e4; 
+    cursor: pointer;
+  }
 
 h1{
     color: #277fae;
@@ -120,17 +145,10 @@ span{
     color: var(--green);
 }
 
-#valor {
-    color: rgb(10, 237, 17);
-    font-size: 15px;
-    
-    
-}
 
 
-span:hover{
-    color: rgb(88, 231, 31);
-}
+
+
 
 section{
     min-height: 100vh;
@@ -171,34 +189,71 @@ section{
 
 .header{
     position: fixed;
-    top:0; left: 0;
     z-index: 999;
     background: var(--bg-color);
-    width: 30rem;
-    border-right: var(--border);
-    height: 100%;
-    padding:2rem;
+    width: 100%;
+    border-bottom: var(--border);
+    height: 10px;
+    background-color: rgb(248, 241, 241);
+    margin-bottom: 10rem;
+    padding:1.5rem;
     text-align: center;
 }
 
-.header .user img{
-    margin:1rem 0;
-    border:.5rem solid transparent;
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    box-shadow: var(--box-shadow);
+.header img{
+    position: relative;
+    height: 1.9rem;
+    width: 2.8rem;
+    display: flex;
+    margin-top: -10px;
+    margin-left: 12%;
+    cursor: pointer;
+   
+}
+.header ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 10rem;
+   
+    
+    
+}
+.header ul li{
+    margin: 10px;
+    font-size: 14px;
+    
+   
+    
+}
+.header ul li a{
+   
+    margin: 2px;
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.header ul li a:hover{
+color: #277fae;
+    
+}
+.br{
+    position: relative;
+    height: 1.9rem;
+    width: 2.8rem;
+    display: flex;
+    margin-top: -19.5px;
+    margin-left: 14.4%;
+    font-weight: 600;
+    color: rgb(102, 101, 101);
+    font-family: Arial, Helvetica, sans-serif;
+   
 }
 
-.header .user h3{
-    color:var(--black);
-    font-size: 2.5rem;
-}
 
-.header .user p{
-    color:var(--green);
-    font-size: 1.5rem;
-}
 
 .header .navbar{
     padding-top: 1rem;
@@ -475,4 +530,8 @@ section{
     margin-top: 5px;
     background-color: rgb(88, 240, 182);
     display: none;
+}
+
+.load{
+    font-family: Arial, Helvetica, sans-serif;
 }

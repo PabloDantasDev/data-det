@@ -78,7 +78,7 @@ const puxaCEP = async () => {
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
-    
+    console.log(data)
     preencheFormulario(data)
 }
 document.querySelector('#ceps').addEventListener('click', puxaCEP())
