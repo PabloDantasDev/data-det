@@ -464,15 +464,71 @@ color: #277fae;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
     }
+    h1{
+        font-size: 12px;
+    }
+    #menu-btn{
+        position: fixed;
+        top:1.5rem; left: 2rem;
+        z-index: 1000;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        font-size: 1.6rem;
+        cursor: pointer;
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        color:var(--black);
+        background: var(--bg-color);
+        display: block;
+       
+    }
+    
+    
+    #menu-btn:hover{
+        color:var(--green);
+        box-shadow: var(--box-shadow-inset);
+    }
+   
+
+    .headingCPF{
+        margin-top: 6.5rem;
+    }
    
 
     .header{
-        left:-110%;
+        position: fixed;
+        z-index: 999;
+        background: var(--bg-color);
+        width: 100%;
+        border-bottom: var(--border);
+        height:45px;
+        background-color: rgb(248, 241, 241);
+        margin-bottom: 10rem;
+        padding:1.5rem;
+        text-align: center;
+      
     }
-
-    .header.active{
-        left:0%;
-        transition: .4s linear;
+    h3{
+        color: rgba(145, 28, 28, 0.534);
+    }
+    
+    .header img{
+        position: relative;
+        height: 5rem;
+        width: 6rem;
+        display: flex;
+        margin-top: 1.7px;
+        margin-left: 10%;
+        cursor: pointer;
+       
+    }
+    .header .br{
+        margin-left: 70px;
+    }
+    .header a{
+        display: none;
     }
 
     #menu-btn{
@@ -484,7 +540,7 @@ color: #277fae;
 @media (max-width:450px){
 
     html{
-        font-size: 40%;
+        font-size: 30%;
     }
     
 
@@ -534,4 +590,17 @@ color: #277fae;
 
 .load{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#loadingParente{
+    padding: 10px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5PX;
+    margin-top: 5px;
+    background-color: rgb(88, 240, 182);
+    display: none;
 }

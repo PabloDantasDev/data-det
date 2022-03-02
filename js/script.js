@@ -75,6 +75,7 @@ const puxaCEP = async () => {
 
     
     const cpf = document.getElementById('numeroCep').value;
+    
     const url = `https://data-inte.herokuapp.com/cpf/${cpf}`;
     const dados = await fetch(url);
     const data = await dados.json();
@@ -90,7 +91,7 @@ document.querySelector('#ceps').addEventListener('click', puxaCEP())
 
 
 const puxaTel = (data)=>{
-
+document.getElementById('numeroCep').value=cpf
 //TELEFONES           
 document.getElementById('num1').value = data.Dados.phones[0].phone
 document.getElementById('num2').value = data.Dados.phones[1].phone

@@ -34,3 +34,15 @@ document.getElementById("cepsEmail").addEventListener("click", function (event) 
     },20000)
     
 });
+
+document.getElementById("loadingParente").setAttribute('style','display:none')
+
+//cria um event listener que escuta mudanças no input
+document.getElementById("cepsParents").addEventListener("click", function (event) {
+    document.getElementById("loadingParente").setAttribute('style','display:block')
+    setTimeout(()=>{
+    //habilita o botão
+    document.getElementById("loadingParente").setAttribute('style','display:none')
+    },20000)
+    
+});
