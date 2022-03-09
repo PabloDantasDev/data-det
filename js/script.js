@@ -2,8 +2,7 @@
 
 let menu = document.querySelector('#menu-btn');
 menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    header.classList.toggle('active');
+    window.location.href='index.html'
 }
 
 
