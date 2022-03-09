@@ -419,10 +419,8 @@ color: #277fae;
 }
 
 
-
-
-
 #copy {
+    margin-top: -100px;
     font-size: 1.5rem;
     text-align: center;
     padding:1rem 1rem;
