@@ -270,7 +270,7 @@ section{
 
 .home .share{
     position: relative;
-    top: 10rem;
+    top: 1rem;
     border-radius: .5rem;
    
     padding:1rem;
@@ -350,17 +350,18 @@ section{
         flex-direction: column;
         color: rgb(247, 247, 247);
         background-color: #277fae;
-        padding: 2px;
-        border-radius: 5px;
+        padding: 5px;
+        border-radius: 120px;
         margin-top: 1rem;
-        height: 30px;
+        height: 40px;
         width: 300px;
         font-size: large;
         display: block;
         
     }
     #copy {
-        margin-top: -1px;
+        
+        margin-top: 6px;
         font-size: 1.5rem;
         text-align: center;
         padding:1rem 1rem;
