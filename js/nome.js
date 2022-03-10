@@ -1,7 +1,4 @@
 
-
-
-
 const puxaNome = async () => {
 
     const nome = document.getElementById('numeroCep').value;
@@ -11,6 +8,8 @@ const puxaNome = async () => {
     const dados = await fetch(url);
     const data = await dados.json();
     console.log(data)
+
+   
 
     document.getElementById('pessoa0').value = data.Dados[0].Nome
     document.getElementById('cpf0').value = data.Dados[0].Cpf
@@ -51,6 +50,7 @@ const puxaNome = async () => {
     document.getElementById('pessoa09').value = data.Dados[9].Nome
     document.getElementById('cpf09').value = data.Dados[9].Cpf
     document.getElementById('data09').value = data.Dados[9].Nascimento
+    
    
     puxaParente(data)
     
