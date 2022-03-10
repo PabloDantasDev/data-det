@@ -52,6 +52,9 @@
 h1{
     color: #277fae;
 }
+button{
+    background: transparent;
+}
 P{
     font-size: 15px;
     font-family: monospace;
@@ -165,7 +168,7 @@ section{
     font-size: 1.7rem;
     cursor: pointer;
     background: #277fae;
-    color:black;
+    color:rgb(255, 255, 255);
     box-shadow: var(--box-shadow);
 }
 
@@ -419,6 +422,7 @@ color: #277fae;
 }
 
 
+
 #copy {
     margin-top: -100px;
     font-size: 1.5rem;
@@ -464,6 +468,56 @@ color: #277fae;
     }
     h1{
         font-size: 12px;
+    }
+
+    .cpf form{
+        margin:1rem auto;
+        max-width: 70rem;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        padding:2rem;
+        
+    }
+    
+    .cpf form .box{
+        padding:3rem 1.5rem;
+        width:100%;
+        background: none;
+        color:var(--black);
+        font-size: 3rem;
+        text-transform: none;
+        margin:1rem 0;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        
+        
+    }
+    
+    .cpf form textarea{
+        height: 20rem;
+        resize: none;
+    }
+    
+    .cpf form .box:focus{
+        box-shadow: var(--box-shadow-inset);
+    }
+    .btn{
+        width: 100%;
+       
+        margin-top: 1rem;
+        display: inline-block;
+        padding:3rem 3.5rem;
+        border-radius: .5rem;
+        font-size: 3rem;
+        cursor: pointer;
+        background: #277fae;
+        color:rgb(255, 255, 255);
+        box-shadow: var(--box-shadow);
+    }
+    
+    .btn:hover{
+       
+        color:rgb(224, 239, 240);
     }
     #menu-btn{
         position: fixed;
