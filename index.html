@@ -1,90 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTEGRA DATA</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/home.css">
-
-</head>
-
-<body>
-
-    <!-- header section starts  -->
-
-    <header class="header">
-
-        <div class="user">
-            <img src="perfil/perfil1.png" alt="">
-
-            <h3 id="logado"> </h3>
-            <p>Bem Vindo!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon"
+    href="https://hdclipartall.com/images/sherlock-holmes-silhouette-sherlock-holmes-clip-art-300_254.png"
+    type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Login INTEGRA DATA</title>
+  </head>
+  <body>
+    <div class="container">
+    
+      <div class="forms-container">
+       <!------------------AREA LOGIN------CAMPOS------------->
+        <div class="signin-signup">
+         
+          <form action="#" class="sign-in-form">
+            <img class="image" src="img/perfil1.png" alt="">
+            <h1 id="brand">INTEGRA <span>DATA</span>  </h1>
+            <h2 class="title">Faça Login</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="E-mail" id="email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Senha" id="senha" />
+            </div>
+            <a id="ent" href="inicio.html">Entrar</a>
+           
+         
+          </form>
+          <form action="#" class="sign-up-form">
+            <img class="image" src="img/perfil1.png" alt="">
+            <h1 id="brand">INTEGRA <span>DATA</span>  </h1>
+            <h2 class="title">Obtenha o Acesso Via Whatsapp.</h2>
+            
+          <button type="submit" class="btn" id="botao">Obter Acesso!</button>          
+                <a id="whats" href="https://api.whatsapp.com/send?phone=5584981651829&text=Olá Gostaria de Obter Acesso ao Sistema de Consulta">Pedir Acesso</a>
+             
+          </form>
+          
         </div>
-
-        <nav class="navbar">
-
-            <a href="#home">INICIO</a>
-            <a href="nome.html">CONSULTAR NOME</a>
-            <a href="cpf.html">CONSULTAR CPF</a>
-
-            <a href="login.html" onclick="sair()">SAIR <span></span></a>
-        </nav>
-
-    </header>
-
-    <!-- header section ends -->
-
-    <div id="menu-btn" class="fas fa-home"></div>
-
-    <!-- theme toggler  -->
-
-    <div id="theme-toggler" class="fas fa-moon"></div>
-
-    <!-- home section starts  -->
-
-    <section class="home" id="home">
-
-        <div class="content">
-            <h3>INTEGRA DATA</h3>
-            <p>Consultas em um só lugar!</p>
+      </div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Novo Aqui?</h3>
+            <p>
+              Entre em contato para obter seu acesso e iniciar as consultas em nosso sistema!
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Obeter Acesso
+            </button>
+          </div>
+      
         </div>
-        <div class="options">
-            <form>
-             <a href="nome.html">CONSULTAR NOME</a>
-              <a href="cpf.html"> CONSULTAR  CPF</a>
-                
-                <a href="login.html"> SAIR</a>
-            </form>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Já Possui Conta?</h3>
+            <p>
+              Faça login em nosso sistema com seus dados!
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Fazer Login
+            </button>
+          </div>       
         </div>
+      </div>
+    </div>
 
-        <div class="share">
-            <a href="#" id="whatsapp" class="fab fa-whatsapp"></a>
-            <a href="#" id="telegram" class="fab fa-telegram"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <div class="credits" id="copy"> created by | <span>INTEGRA DATA </span> | all
-                rights reserved </div>
-        </div>
-    </section>
-
-
-    <!-- home section ends -->
-
-
-
-    <!---------------CONSULTA CPF--------------------------------->
-
-
-    <script defer src="js/script.js"></script>
-</body>
-<script defer src="js/script.js"></script>
-
+    <script src="js/login.js"></script>
+  </body>
 </html>
