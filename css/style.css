@@ -198,7 +198,7 @@ section{
     background: var(--bg-color);
     width: 100%;
     border-bottom: var(--border);
-    height: 10px;
+    height: 20px;
     background-color: rgb(248, 241, 241);
     margin-bottom: 10rem;
     padding:1.5rem;
@@ -632,6 +632,18 @@ color: #277fae;
 }
 
 #loadingParente{
+    padding: 10px;
+    font-size:14px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 5PX;
+    margin-top: 5px;
+    background-color: rgb(88, 240, 182);
+    display: none;
+}
+#loadModel{
     padding: 10px;
     font-size:14px;
     text-align: center;
