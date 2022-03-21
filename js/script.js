@@ -1,5 +1,6 @@
 
 
+
 let menu = document.querySelector('#menu-btn');
 menu.onclick = () => {
     window.location.href='inicio.html'

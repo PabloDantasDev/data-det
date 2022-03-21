@@ -1,80 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon"
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <script src="sweetalert2.all.min.js"></script>
+
+  <link rel="shortcut icon"
     href="https://hdclipartall.com/images/sherlock-holmes-silhouette-sherlock-holmes-clip-art-300_254.png"
     type="image/x-icon">
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Login INTEGRA DATA</title>
-  </head>
-  <body>
-    <div class="container">
-    
-      <div class="forms-container">
-       <!------------------AREA LOGIN------CAMPOS------------->
-        <div class="signin-signup">
-         
-          <form action="#" class="sign-in-form">
-            <img class="image" src="img/perfil1.png" alt="">
-            <h1 id="brand">INTEGRA <span>DATA</span>  </h1>
-            <h2 class="title">Faça Login</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="E-mail" id="email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Senha" id="senha" />
-            </div>
-            <a id="ent" href="inicio.html">Entrar</a>
-           
-         
-          </form>
-          <form action="#" class="sign-up-form">
-            <img class="image" src="img/perfil1.png" alt="">
-            <h1 id="brand">INTEGRA <span>DATA</span>  </h1>
-            <h2 class="title">Obtenha o Acesso Via Whatsapp.</h2>
-            
-          <button type="submit" class="btn" id="botao">Obter Acesso!</button>          
-                <a id="whats" href="https://api.whatsapp.com/send?phone=5584981651829&text=Olá Gostaria de Obter Acesso ao Sistema de Consulta">Pedir Acesso</a>
-             
-          </form>
-          
+
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/index.css" />
+
+
+
+  <title>Login INTEGRA DATA</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="forms-container">
+      <!------------------AREA LOGIN------CAMPOS------------->
+      <div class="signin-signup">
+        <form onsubmit="login(event)" class="sign-in-form">
+          <img class="image" src="img/perfil1.png" alt="">
+          <h1 id="brand">INTEGRA <span>DATA</span> </h1>
+          <h2 class="title">Faça Login</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="email" placeholder="E-mail" id="email" />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" id="password" />
+          </div>
+          <button id="btnEntra" type="submit" >ENTRAR</button>
+        </form>
+
+
+
+
+        
+        <form action="#" class="sign-up-form">
+          <img class="image" src="img/perfil1.png" alt="">
+          <h1 id="brand">INTEGRA <span>DATA</span> </h1>
+          <h2 class="title">Obtenha o Acesso Via Whatsapp.</h2>
+
+          <button type="submit" class="btn" id="botao">Obter Acesso!</button>
+          <a id="whats"
+            href="https://api.whatsapp.com/send?phone=5542999987140&text=Olá Gostaria de Obter Acesso ao Sistema de Consulta">Pedir
+            Acesso</a>
+        </form>
+      </div>
+    </div>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Novo Aqui?</h3>
+          <p>
+            Entre em contato para obter seu acesso e iniciar as consultas em nosso sistema!
+          </p>
+          <button class="btn transparent" id="sign-up-btn">
+            Obeter Acesso
+          </button>
         </div>
       </div>
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>Novo Aqui?</h3>
-            <p>
-              Entre em contato para obter seu acesso e iniciar as consultas em nosso sistema!
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Obeter Acesso
-            </button>
-          </div>
-      
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>Já Possui Conta?</h3>
-            <p>
-              Faça login em nosso sistema com seus dados!
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Fazer Login
-            </button>
-          </div>       
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Já Possui Conta?</h3>
+          <p>
+            Faça login em nosso sistema com seus dados!
+          </p>
+          <button class="btn transparent" id="sign-in-btn">
+            Fazer Login
+          </button>
         </div>
       </div>
     </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script>  
 
-    <script src="js/login.js"></script>
-  </body>
+    // Your web app's Firebase configuration
+  
+    const firebaseConfig = {
+        apiKey: "AIzaSyDrny14gPdEDLZ7zF57R_5LchnS6A6RfCM",
+        authDomain: "integra-data.firebaseapp.com",
+        projectId: "integra-data",
+        storageBucket: "integra-data.appspot.com",
+        messagingSenderId: "700275520060",
+        appId: "1:700275520060:web:05084a1e5d76f9b6688939"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth()
+
+
+
+
+</script>
+
+  <script src="js/login.js"></script>
+
+</body>
+
 </html>
