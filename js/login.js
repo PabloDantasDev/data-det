@@ -12,7 +12,7 @@ function login(event) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    alert('USUARIO OU SENHA INCORRETS', error.message)
+    alert('USUARIO OU SENHA INCORRETOS', error.message)
 
   }).then(function (user) {
 
